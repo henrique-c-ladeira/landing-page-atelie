@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import backgroundImage from '../../assets/img/background.png';
-import backgroundContent from '../../assets/img/background-marrom.png';
+import backgroundImage from '../../../assets/img/background.png';
+import backgroundContent from '../../../assets/img/background-marrom.png';
 
 export const Container = styled.div`
 `;
