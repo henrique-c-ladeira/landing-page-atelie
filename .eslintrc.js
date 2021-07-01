@@ -22,5 +22,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-unused-vars': 1,
     'react/jsx-props-no-spreading': 1,
+    'react/prop-types': 0,
   },
 };
