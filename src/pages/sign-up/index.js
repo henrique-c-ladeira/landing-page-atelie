@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from './components/card';
 import {
   Container, Content, TopContainer, TopImage, ImageWrapper, ButtonWrapper,
 } from './styles';
 import topImage from '../../assets/img/clouds.png';
 import { SignupForm } from './components/signup-form';
+import { Modal } from '../../components';
 
 export const SignUpPage = () => {
-  const keep = 0;
+  const [modalVisible, setModalVisible] = useState(true);
 
   return (
     <Container>
@@ -25,6 +26,8 @@ export const SignUpPage = () => {
         </p>
         <SignupForm handleSubmit={(event) => { console.log(event); }} />
       </Content>
+
+      <Modal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </Container>
   );
 };
