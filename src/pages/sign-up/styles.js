@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import backgroundImage from '../../assets/img/background.png';
-import cardImage from '../../assets/svg/logo-camapanha-red-tagline.svg';
+import backgroundContent from '../../assets/img/background-marrom.png';
 
 export const Container = styled.div`
 `;
@@ -8,7 +8,8 @@ export const Container = styled.div`
 export const TopContainer = styled.div`
     padding-top: 35vh;
     background-image: url(${backgroundImage});
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 35%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -18,6 +19,7 @@ export const TopContainer = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -34,7 +36,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const CardImage = styled.img`
-    width: 250px;
+    width: 230px;
     z-index: 1;
 
 `;
@@ -42,7 +44,40 @@ export const CardImage = styled.img`
 export const TopImage = styled.img`
     position: absolute;
     width: 100%;
+    max-height: 100%;
     right: 0;
     margin-top: 5vh;
     top: 0;
+`;
+
+export const Content = styled.div`
+    height: 100%;
+    background-image: url(${backgroundContent});
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 30px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px;
+        padding-top: 0px;
+    }
+`;
+
+export const FormContainer = styled.form`
+    display: flex;
+    flex-direction: column;
+    padding:0px 30px;
+    gap: 25px;
 `;
