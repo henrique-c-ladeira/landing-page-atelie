@@ -1,10 +1,12 @@
 import React from 'react';
 import cardImage from '../../../assets/svg/logo-camapanha-red-tagline.svg';
 import { Button } from '../../../components/button';
-import { ButtonWrapper, CardImage, ImageWrapper } from '../styles';
+import {
+  CardContainer, ButtonWrapper, CardImage, ImageWrapper,
+} from '../styles';
 
 export const Card = () => (
-  <>
+  <CardContainer>
     <ImageWrapper>
       <CardImage alt="" src={cardImage} />
     </ImageWrapper>
@@ -12,5 +14,5 @@ export const Card = () => (
       <Button> Login </Button>
       <Button> Cadastre-se </Button>
     </ButtonWrapper>
-  </>
+  </CardContainer>
 );
