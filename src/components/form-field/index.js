@@ -5,8 +5,11 @@ import MaskedInput from 'react-input-mask';
 
 const BareFormField = styled(TextField).attrs({})``;
 
-export const FormField = ({ mask, onChange, ...props }) => (
+export const FormField = ({
+  mask, value, onChange, ...props
+}) => (
   <MaskedInput
+    value={value}
     onChange={onChange}
     mask={mask}
   >
