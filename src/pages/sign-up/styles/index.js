@@ -81,3 +81,11 @@ export const FormContainer = styled.form`
     padding:0px 30px;
     gap: 25px;
 `;
+
+export const ErrorText = styled.span`
+    color: #e6a727;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+`;

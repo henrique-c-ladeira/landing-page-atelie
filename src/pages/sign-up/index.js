@@ -6,9 +6,23 @@ import {
 import topImage from '../../assets/img/clouds.png';
 import { SignupForm } from './components/signup-form';
 import { Modal } from '../../components';
+import { signUpRequest } from '../../api';
 
 export const SignUpPage = () => {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [userMsg, setUserMsg] = useState('');
+
+  const handleSubmit = async (form) => {
+    setModalVisible(true);
+    setLoading(true);
+    const created = await signUpRequest(form);
+
+    if (created) setUserMsg('Cadastro realizado com sucesso!');
+    else setUserMsg('Ocorreu um erro.');
+
+    setLoading(false);
+  };
 
   return (
     <Container>
@@ -24,10 +38,15 @@ export const SignUpPage = () => {
           sua participação na campanha e concorrer
           aos prêmios.
         </p>
-        <SignupForm handleSubmit={(event) => { console.log(event); }} />
+        <SignupForm handleSubmit={handleSubmit} />
       </Content>
 
-      <Modal visible={modalVisible} onClose={() => setModalVisible(false)} />
+      <Modal
+        loading={loading}
+        message={userMsg}
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+      />
     </Container>
   );
 };
