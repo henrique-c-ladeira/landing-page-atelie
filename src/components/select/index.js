@@ -13,7 +13,7 @@ export const Select = ({ onChange, list }) => (
       onChange={onChange}
     >
       {list.map((elem) => (
-        <MenuItem value={elem}>
+        <MenuItem key={elem} value={elem}>
           {elem}
         </MenuItem>
       ))}
