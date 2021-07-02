@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, FormField, Select } from '../../../components';
-import { ButtonWrapper, FormContainer, ErrorText } from '../styles';
+import {
+  ButtonWrapper, FormContainer, ErrorText, FormFieldWrapper,
+} from '../styles';
 import {
   classificationValidation,
   companyValidation, cpfValidation,
@@ -64,28 +66,35 @@ export const SignupForm = ({ handleSubmit }) => {
 
   return (
     <FormContainer onSubmit={submitForm}>
-      <FormField value={name} onChange={handleChange(setName)} fullWidth label="Nome" placeholder="Nome" />
-      {nameStatus.error && <ErrorText>{nameStatus.message}</ErrorText>}
+      <FormFieldWrapper>
+        <FormField value={name} onChange={handleChange(setName)} fullWidth label="Nome" placeholder="Nome" />
+        {nameStatus.error && <ErrorText>{nameStatus.message}</ErrorText>}
+      </FormFieldWrapper>
 
-      <FormField value={cpf} onChange={handleChange(setCpf)} fullWidth mask="999.999.999-99" label="CPF" placeholder="CPF" />
-      {cpfStatus.error && <ErrorText>{cpfStatus.message}</ErrorText>}
+      <FormFieldWrapper>
+        <FormField value={cpf} onChange={handleChange(setCpf)} fullWidth mask="999.999.999-99" label="CPF" placeholder="CPF" />
+        {cpfStatus.error && <ErrorText>{cpfStatus.message}</ErrorText>}
+        <FormField value={email} onChange={handleChange(setEmail)} fullWidth label="E-mail" placeholder="E-mail" />
+        {emailStatus.error && <ErrorText>{emailStatus.message}</ErrorText>}
+      </FormFieldWrapper>
 
-      <FormField value={email} onChange={handleChange(setEmail)} fullWidth label="E-mail" placeholder="E-mail" />
-      {emailStatus.error && <ErrorText>{emailStatus.message}</ErrorText>}
-
-      <FormField value={password} onChange={handleChange(setPassword)} fullWidth label="Senha" placeholder="Digite sua senha" />
-      {passwordStatus.error && <ErrorText>{passwordStatus.message}</ErrorText>}
-      {(password !== confirmPassword)
+      <FormFieldWrapper>
+        <FormField value={password} onChange={handleChange(setPassword)} fullWidth label="Senha" placeholder="Digite sua senha" />
+        {passwordStatus.error && <ErrorText>{passwordStatus.message}</ErrorText>}
+        {(password !== confirmPassword)
       && <ErrorText>A senha deve coincidir com a confirmação.</ErrorText>}
 
-      <FormField value={confirmPassword} onChange={handleChange(setConfirmPassword)} fullWidth label="Senha" placeholder="Confirme sua senha" />
-      {confirmPasswordStatus.error && <ErrorText>{confirmPasswordStatus.message}</ErrorText>}
+        <FormField value={confirmPassword} onChange={handleChange(setConfirmPassword)} fullWidth label="Senha" placeholder="Confirme sua senha" />
+        {confirmPasswordStatus.error && <ErrorText>{confirmPasswordStatus.message}</ErrorText>}
+      </FormFieldWrapper>
 
-      <FormField value={company} onChange={handleChange(setCompany)} fullWidth label="Empresa" placeholder="Empresa" />
-      {companyStatus.error && <ErrorText>{companyStatus.message}</ErrorText>}
+      <FormFieldWrapper>
+        <FormField value={company} onChange={handleChange(setCompany)} fullWidth label="Empresa" placeholder="Empresa" />
+        {companyStatus.error && <ErrorText>{companyStatus.message}</ErrorText>}
 
-      <Select value={classification} list={['Gerente', 'Revendedor', 'Distribuidor']} onChange={handleChange(setClassification)} />
-      {classificationStatus.error && <ErrorText>{classificationStatus.message}</ErrorText>}
+        <Select value={classification} list={['Gerente', 'Revendedor', 'Distribuidor']} onChange={handleChange(setClassification)} />
+        {classificationStatus.error && <ErrorText>{classificationStatus.message}</ErrorText>}
+      </FormFieldWrapper>
 
       <ButtonWrapper>
         <Button type="submit"> Enviar </Button>

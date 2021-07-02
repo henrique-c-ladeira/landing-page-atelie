@@ -5,12 +5,24 @@ import backgroundContent from '../../../assets/img/background-marrom.png';
 export const Container = styled.div`
 `;
 
-export const TopContainer = styled.div`
-    padding-top: 35vh;
-    background-image: url(${backgroundImage});
-    height: 100%;
-    padding-bottom: 35%;
+export const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
+export const TopContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media(min-width: 800px){
+        flex-direction: row;
+    }
+    @media(max-width: 800px){
+        padding-top: 35vh;
+        padding-bottom: 35%;
+    }
+    background-image: url(${backgroundImage});
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -32,22 +44,26 @@ export const ImageWrapper = styled.div`
     justify-content: center;
     flex: 1;
     padding: 20px;
+    max-width: 800px;
     padding-bottom: 50px;
 `;
 
 export const CardImage = styled.img`
-    width: 230px;
+    max-width: 230px;
     z-index: 1;
 
 `;
 
 export const TopImage = styled.img`
-    position: absolute;
-    width: 100%;
+    @media(max-width: 800px){
+        position: absolute;
+        max-width: 100%;
+        right: 0;
+        top: 0;
+    }
+    max-width: min(70%,800px);
     max-height: 100%;
-    right: 0;
     margin-top: 5vh;
-    top: 0;
 `;
 
 export const Content = styled.div`
@@ -80,6 +96,7 @@ export const FormContainer = styled.form`
     flex-direction: column;
     padding:0px 30px;
     gap: 25px;
+    align-content: center;
 `;
 
 export const ErrorText = styled.span`
@@ -88,4 +105,19 @@ export const ErrorText = styled.span`
     font-size: 14px;
     padding: 0;
     margin: 0;
+`;
+
+export const FormFieldWrapper = styled.div`
+    @media(min-width: 800px){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding:0px 100px;
+    }
+    @media(max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 `;
