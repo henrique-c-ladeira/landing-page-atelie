@@ -5,11 +5,9 @@ import {
 } from '@material-ui/core';
 
 export const Select = ({ onChange, list }) => (
-  <FormControl>
-    <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+  <FormControl style={{ width: '100%' }}>
+    <InputLabel>Categoria</InputLabel>
     <MuiSelect
-      labelId="demo-simple-select-label"
-      id="demo-simple-select"
       onChange={onChange}
     >
       {list.map((elem) => (
