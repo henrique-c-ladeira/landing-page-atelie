@@ -1,4 +1,4 @@
-import { makeStyles, Modal as MuiModal } from '@material-ui/core';
+import { makeStyles, Modal as MuiModal, CircularProgress } from '@material-ui/core';
 import React from 'react';
 import { Close } from '@material-ui/icons';
 import { CloseButton } from './styles';
@@ -18,13 +18,16 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
   },
 }));
-export const Modal = ({ visible, onClose }) => {
+export const Modal = ({
+  visible, onClose, loading, message,
+}) => {
   const classes = useStyles();
   return (
     <MuiModal open={visible} onClose={onClose}>
       <div className={classes.paper}>
         <CloseButton onClick={onClose}><Close /></CloseButton>
-        Cadastro realizado com sucesso.
+        {loading ? <CircularProgress color="dark" />
+          : message}
       </div>
 
     </MuiModal>
