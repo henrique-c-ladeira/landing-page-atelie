@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Card } from './components/card';
 import {
-  Container, Content, TopContainer, TopImage, ImageWrapper, ButtonWrapper,
+  Container, Content, TopContainer, TopImage,
 } from './styles';
 import topImage from '../../assets/img/clouds.png';
 import { SignupForm } from './components/signup-form';
 import { Modal } from '../../components';
 import { signUpRequest } from '../../api';
+import { Footer } from '../../components/footer';
+import { loremIpsumOneParagraph } from '../../constants/loremipsum';
 
 export const SignUpPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -40,6 +42,11 @@ export const SignUpPage = () => {
         </p>
         <SignupForm handleSubmit={handleSubmit} />
       </Content>
+
+      <Footer
+        title="Só quem vende curte as experiências mais diferentonas!"
+        content={loremIpsumOneParagraph}
+      />
 
       <Modal
         loading={loading}
