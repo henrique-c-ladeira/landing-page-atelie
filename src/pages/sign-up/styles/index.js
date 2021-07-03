@@ -51,7 +51,6 @@ export const ImageWrapper = styled.div`
 export const CardImage = styled.img`
     max-width: 230px;
     z-index: 1;
-
 `;
 
 export const TopImage = styled.img`
@@ -113,11 +112,15 @@ export const FormFieldWrapper = styled.div`
         flex-direction: row;
         justify-content: center;
         gap: 40px;
-        padding:0px 100px;
+        padding:0px 150px;
     }
     @media(max-width: 800px){
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
+`;
+
+export const Gap = styled.div`
+    height: 25px;
 `;
