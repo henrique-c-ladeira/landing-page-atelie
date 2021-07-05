@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Card } from './components/card';
+import React, { useRef, useState } from 'react';
+import { Card } from '../../components/card';
 import {
   Container, Content, TopContainer, TopImage,
 } from './styles';
@@ -11,6 +11,7 @@ import { Footer } from '../../components/footer';
 import { loremIpsumOneParagraph } from '../../constants/loremipsum';
 
 export const SignUpPage = () => {
+  const signUpRef = useRef();
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [userMsg, setUserMsg] = useState('');
@@ -33,7 +34,7 @@ export const SignUpPage = () => {
         <TopImage alt="" src={topImage} />
       </TopContainer>
 
-      <Content>
+      <Content ref={signUpRef}>
         <h1>Cadastre-se</h1>
         <p>
           Preencha os campos abaixo para validar
