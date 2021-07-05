@@ -58,6 +58,6 @@ export const BottomImage = styled.img`
     position: absolute;
     bottom: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -40%);
   }
 `;
