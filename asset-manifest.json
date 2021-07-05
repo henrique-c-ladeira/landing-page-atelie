@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/landing-page-atelie/static/css/main.5ef0b052.chunk.css",
-    "main.js": "/landing-page-atelie/static/js/main.c908c610.chunk.js",
-    "main.js.map": "/landing-page-atelie/static/js/main.c908c610.chunk.js.map",
+    "main.js": "/landing-page-atelie/static/js/main.09564cd3.chunk.js",
+    "main.js.map": "/landing-page-atelie/static/js/main.09564cd3.chunk.js.map",
     "runtime-main.js": "/landing-page-atelie/static/js/runtime-main.c911841b.js",
     "runtime-main.js.map": "/landing-page-atelie/static/js/runtime-main.c911841b.js.map",
     "static/js/2.5148700c.chunk.js": "/landing-page-atelie/static/js/2.5148700c.chunk.js",
@@ -15,13 +15,13 @@
     "static/media/background-marrom.a9aaa6f3.png": "/landing-page-atelie/static/media/background-marrom.a9aaa6f3.png",
     "static/media/background.cba1f066.png": "/landing-page-atelie/static/media/background.cba1f066.png",
     "static/media/clouds.88d7a71b.png": "/landing-page-atelie/static/media/clouds.88d7a71b.png",
-    "static/media/logo-camapanha-red-tagline.c0316a06.svg": "/landing-page-atelie/static/media/logo-camapanha-red-tagline.c0316a06.svg",
-    "static/media/logo-campanha-red.204b23c6.svg": "/landing-page-atelie/static/media/logo-campanha-red.204b23c6.svg"
+    "static/media/logo-camapanha-red-tagline.acc4f1fb.svg": "/landing-page-atelie/static/media/logo-camapanha-red-tagline.acc4f1fb.svg",
+    "static/media/logo-campanha-red.69643742.svg": "/landing-page-atelie/static/media/logo-campanha-red.69643742.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c911841b.js",
     "static/js/2.5148700c.chunk.js",
     "static/css/main.5ef0b052.chunk.css",
-    "static/js/main.c908c610.chunk.js"
+    "static/js/main.09564cd3.chunk.js"
   ]
 }
