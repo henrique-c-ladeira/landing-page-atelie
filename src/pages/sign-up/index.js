@@ -30,7 +30,10 @@ export const SignUpPage = () => {
   return (
     <Container>
       <TopContainer>
-        <Card />
+        <Card
+          linkLeft="/login"
+          onClickRight={() => signUpRef.current.scrollIntoView({ behavior: 'smooth' })}
+        />
         <TopImage alt="" src={topImage} />
       </TopContainer>
 
