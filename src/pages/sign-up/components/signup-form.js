@@ -86,14 +86,14 @@ export const SignupForm = ({ handleSubmit }) => {
 
       <FormFieldWrapper>
         <div style={{ flex: 1 }}>
-          <FormField value={password} onChange={handleChange(setPassword)} fullWidth label="Senha" placeholder="Digite sua senha" />
+          <FormField value={password} onChange={handleChange(setPassword)} fullWidth type="password" label="Senha" placeholder="Digite sua senha" />
           {passwordStatus.error && <ErrorText>{passwordStatus.message}</ErrorText>}
           {(password !== confirmPassword)
       && <ErrorText>A senha deve coincidir com a confirmação.</ErrorText>}
         </div>
 
         <div style={{ flex: 1 }}>
-          <FormField value={confirmPassword} onChange={handleChange(setConfirmPassword)} fullWidth label="Confirme sua senha" placeholder="Confirme sua senha" />
+          <FormField value={confirmPassword} onChange={handleChange(setConfirmPassword)} fullWidth type="password" label="Confirme sua senha" placeholder="Confirme sua senha" />
           {confirmPasswordStatus.error && <ErrorText>{confirmPasswordStatus.message}</ErrorText>}
         </div>
       </FormFieldWrapper>
