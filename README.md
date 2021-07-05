@@ -2,6 +2,10 @@
 
 Esta página é um desafio proposto pela empresa Atelie de Propaganda.
 
+Link para visualização:
+
+https://henrique-c-ladeira.github.io/landing-page-atelie/
+
 ## Como instalar
 
 ### Considerações
