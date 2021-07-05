@@ -5,11 +5,6 @@ import backgroundContent from '../../../assets/img/background-marrom.png';
 export const Container = styled.div`
 `;
 
-export const CardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
 export const TopContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -46,11 +41,6 @@ export const ImageWrapper = styled.div`
     padding: 20px;
     max-width: 800px;
     padding-bottom: 50px;
-`;
-
-export const CardImage = styled.img`
-    max-width: 230px;
-    z-index: 1;
 `;
 
 export const TopImage = styled.img`
